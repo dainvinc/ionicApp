@@ -15,6 +15,7 @@ import { Subscription } from 'rxjs/Subscription';
   selector: 'page-edit-item',
   templateUrl: 'edit-item.html',
 })
+
 export class EditItemPage {
 
   addItemSubscription: Subscription;
