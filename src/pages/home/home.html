@@ -9,10 +9,18 @@
   </ion-navbar>
 </ion-header>
 <ion-content padding class="background">
-  <ion-list>
-    <ion-item class="new-item" *ngFor="let item of itemListRef$ | async" (click)="selectItem(item)">
-      <h2>Item Name: {{ item.itemName }}</h2>
-      <h3>Price: ${{ item.itemNumber }}</h3>
-    </ion-item>
-  </ion-list>
+  <ion-grid>
+  <ion-row justify-content-center>
+    <ion-col col-sm-6>
+    <ion-list>
+        
+        <ion-item class="new-item col col-lg-1 col-md-2" *ngFor="let item of itemListRef$ | async" (click)="selectItem(item)">
+          <h2>Item Name: {{ item.itemName }}</h2>
+          <h3>Price: ${{ item.itemNumber }}</h3>
+        </ion-item>
+      
+    </ion-list>
+    </ion-col>
+  </ion-row>
+  </ion-grid>
 </ion-content>
