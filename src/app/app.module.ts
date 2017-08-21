@@ -10,18 +10,25 @@ import { HomePage } from '../pages/home/home';
 import { FIREBASE_CREDENTIALS } from './firebase.credentials';
 import { AddItemsPage } from '../pages/add-items/add-items';
 import { EditItemPage } from '../pages/edit-item/edit-item';
+import { LoginPage } from '../pages/login/login';
+// import { AuthProvider } from '../providers/auth/auth';
+import { HttpModule } from '@angular/http';
+import { AngularFireAuthModule } from 'angularfire2/auth';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
     AddItemsPage,
-    EditItemPage
+    EditItemPage,
+    LoginPage
   ],
   imports: [
     BrowserModule,
+    HttpModule,
     IonicModule.forRoot(MyApp),
     AngularFireModule.initializeApp(FIREBASE_CREDENTIALS),
+    AngularFireAuthModule,
     AngularFireDatabaseModule
   ],
   bootstrap: [IonicApp],
@@ -29,12 +36,14 @@ import { EditItemPage } from '../pages/edit-item/edit-item';
     MyApp,
     HomePage,
     AddItemsPage,
-    EditItemPage
+    EditItemPage,
+    LoginPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
+    // AuthProvider
   ]
 })
 export class AppModule {}
