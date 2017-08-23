@@ -1,18 +1,21 @@
 <ion-header>
-  <ion-navbar>
-    <button ion-button menuToggle>
+  <ion-navbar color="dark">
+    <button ion-button icon-only menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Home</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="navigateToAddItemsPage()">
+        <ion-icon name="add"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>Today's Specials</ion-title>
   </ion-navbar>
 </ion-header>
-
-<ion-content padding>
-  <h3>Ionic Menu Starter</h3>
-
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
-  </p>
-
-  <button ion-button secondary menuToggle>Toggle Menu</button>
+<ion-content padding class="background">
+  <ion-list>
+    <ion-item class="new-item" *ngFor="let item of itemListRef$ | async" (click)="selectItem(item)">
+      <h2>Item Name: {{ item.itemName }}</h2>
+      <h3>Price: ${{ item.itemNumber }}</h3>
+    </ion-item>
+  </ion-list>
 </ion-content>

@@ -1,0 +1,25 @@
+.mybanner {
+  background-image: url("https://static.pexels.com/photos/66640/pexels-photo-66640.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.welcome {
+  text-align: center;
+  padding: 0 10%;
+  margin: 50% auto;
+}
+
+h1 {
+  font-family: sans-serif;
+  color: black;
+  border-bottom: 2px solid black;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+hr{
+  height: 2px;
+  width: 20%;
+  color: white;
+}
