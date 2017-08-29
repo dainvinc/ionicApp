@@ -8,6 +8,7 @@ import { HomePage } from '../pages/home/home';
 import { WelcomePage } from '../pages/welcome/welcome';
 import { AboutUsPage } from '../pages/about-us/about-us';
 import { FullMenuPage } from '../pages/full-menu/full-menu';
+import { DirectionsPage } from '../pages/directions/directions';
 
 @Component({
   templateUrl: 'app.html'
@@ -27,7 +28,8 @@ export class MyApp {
       { title: 'Welcome', component: WelcomePage},
       { title: 'Home', component: HomePage },
       { title: 'Menu', component: FullMenuPage },
-      { title: 'Contact Us', component: AboutUsPage }
+      { title: 'Contact Us', component: AboutUsPage },
+      { title: 'Get Directions', component: DirectionsPage}
     ];
 
   }
