@@ -5,9 +5,6 @@ import { AddItem } from '../../models/add-item/add-item.interface';
 import { EditItemPage } from '../edit-item/edit-item';
 import { AddItemPage } from '../add-item/add-item';
 import { User } from '../../models/users/users.interface';
-// import { ListPage } from '../list/list';
-// import { HomePage } from '../home/home';
-// import { LoginPage } from '../login/login';
 
 @Component({
   selector: 'page-home',
@@ -16,9 +13,7 @@ import { User } from '../../models/users/users.interface';
 
 
 export class HomePage {
-  // @ViewChild(Nav) nav: Nav;
   user = {} as User;
-  // pages: Array<{title: string, component: any}>;
   
   itemListRef$: FirebaseListObservable<AddItem[]>;
   
@@ -54,7 +49,8 @@ export class HomePage {
             console.log("Cancelled!");
           }
         }
-      ]}).present();
+      ]
+    }).present();
   }
   
   navigateToAddItemsPage() {

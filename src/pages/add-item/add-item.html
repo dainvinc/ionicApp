@@ -18,13 +18,13 @@
     <ion-col col-lg-5 class="login-form">
       <ion-item>
         <ion-label floating>Item Name</ion-label>
-        <ion-input type="text"></ion-input>  
+        <ion-input type="text" [(ngModel)]="addItem.itemName"></ion-input>  
       </ion-item>
       <ion-item>
         <ion-label floating>Price</ion-label>
-        <ion-input type="number"></ion-input>  
+        <ion-input type="number" [(ngModel)]="addItem.itemNumber"></ion-input>  
       </ion-item>
-  <button ion-button block (click)="addItem()" color="secondary">Add Item</button>    
+  <button ion-button block (click)="addNewItem()" color="secondary">Add Item</button>    
     </ion-col>
   </ion-row>
 </ion-content>

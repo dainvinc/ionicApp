@@ -14,6 +14,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { LoginPage } from '../pages/login/login';
 import { AddItemPage } from '../pages/add-item/add-item';
 import { WelcomePage } from '../pages/welcome/welcome';
+import { AboutUsPage } from '../pages/about-us/about-us';
+import { FullMenuPage } from '../pages/full-menu/full-menu';
 
 
 @NgModule({
@@ -24,7 +26,9 @@ import { WelcomePage } from '../pages/welcome/welcome';
     EditItemPage,
     LoginPage,
     AddItemPage,
-    WelcomePage
+    WelcomePage,
+    AboutUsPage,
+    FullMenuPage
   ],
   imports: [
     BrowserModule,
@@ -41,7 +45,9 @@ import { WelcomePage } from '../pages/welcome/welcome';
     EditItemPage,
     LoginPage,
     WelcomePage,
-    AddItemPage
+    AddItemPage,
+    AboutUsPage,
+    FullMenuPage
   ],
   providers: [
     StatusBar,

@@ -23,6 +23,6 @@ export class WelcomePage {
   }
   
   navigateToHomePage() {
-    this.navCtrl.push(HomePage);
+    this.navCtrl.setRoot(HomePage);
   }
 }
