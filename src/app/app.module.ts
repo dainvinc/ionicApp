@@ -16,6 +16,7 @@ import { AddItemPage } from '../pages/add-item/add-item';
 import { WelcomePage } from '../pages/welcome/welcome';
 import { AboutUsPage } from '../pages/about-us/about-us';
 import { FullMenuPage } from '../pages/full-menu/full-menu';
+import { DirectionsPage } from '../pages/directions/directions`';
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import { FullMenuPage } from '../pages/full-menu/full-menu';
     AddItemPage,
     WelcomePage,
     AboutUsPage,
-    FullMenuPage
+    FullMenuPage,
+    DirectionsPage
   ],
   imports: [
     BrowserModule,
@@ -47,7 +49,8 @@ import { FullMenuPage } from '../pages/full-menu/full-menu';
     WelcomePage,
     AddItemPage,
     AboutUsPage,
-    FullMenuPage
+    FullMenuPage,
+    DirectionsPage
   ],
   providers: [
     StatusBar,
