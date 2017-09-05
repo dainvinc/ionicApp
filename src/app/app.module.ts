@@ -18,6 +18,7 @@ import { AboutUsPage } from '../pages/about-us/about-us';
 import { FullMenuPage } from '../pages/full-menu/full-menu';
 import { DirectionsPage } from '../pages/directions/directions';
 import { Geolocation } from '@ionic-native/geolocation';
+// import { NgModule } from '@angular/core';
 
 
 @NgModule({
