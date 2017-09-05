@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
-import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
+import { IonicApp, IonicErrorHandler, IonicModule, IonicPageModule } from 'ionic-angular';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireAuthModule } from 'angularfire2/auth';
@@ -16,7 +16,8 @@ import { AddItemPage } from '../pages/add-item/add-item';
 import { WelcomePage } from '../pages/welcome/welcome';
 import { AboutUsPage } from '../pages/about-us/about-us';
 import { FullMenuPage } from '../pages/full-menu/full-menu';
-import { DirectionsPage } from '../pages/directions/directions`';
+import { DirectionsPage } from '../pages/directions/directions';
+import { Geolocation } from '@ionic-native/geolocation';
 
 
 @NgModule({
@@ -35,6 +36,7 @@ import { DirectionsPage } from '../pages/directions/directions`';
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
+    IonicPageModule.forChild(DirectionsPage),
     AngularFireModule.initializeApp(FIREBASE_CREDENTIALS),
     AngularFireDatabaseModule,
     AngularFireAuthModule
@@ -55,6 +57,7 @@ import { DirectionsPage } from '../pages/directions/directions`';
   providers: [
     StatusBar,
     SplashScreen,
+    Geolocation,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
