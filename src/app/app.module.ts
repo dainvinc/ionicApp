@@ -17,6 +17,7 @@ import { WelcomePage } from '../pages/welcome/welcome';
 import { AboutUsPage } from '../pages/about-us/about-us';
 import { FullMenuPage } from '../pages/full-menu/full-menu';
 import { DirectionsPage } from '../pages/directions/directions';
+import { GoogleMaps } from '@ionic-native/google-maps';
 import { Geolocation } from '@ionic-native/geolocation';
 // import { NgModule } from '@angular/core';
 
@@ -32,7 +33,7 @@ import { Geolocation } from '@ionic-native/geolocation';
     WelcomePage,
     AboutUsPage,
     FullMenuPage,
-    DirectionsPage
+    DirectionsPage,
   ],
   imports: [
     BrowserModule,
@@ -53,12 +54,13 @@ import { Geolocation } from '@ionic-native/geolocation';
     AddItemPage,
     AboutUsPage,
     FullMenuPage,
-    DirectionsPage
+    DirectionsPage,
   ],
   providers: [
     StatusBar,
     SplashScreen,
     Geolocation,
+    GoogleMaps,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
