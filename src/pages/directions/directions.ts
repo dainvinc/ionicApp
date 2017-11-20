@@ -9,7 +9,7 @@ declare var google: any;
 })
 export class DirectionsPage {
   @ViewChild('map') mapRef: ElementRef;
-  map: any;
+
   constructor(public navCtrl: NavController) {
     
   }
@@ -20,14 +20,22 @@ export class DirectionsPage {
   }
   
   loadMap() {
-    const location = new google.maps.LatLng(51.570531, -43.254125);
+    const location = new google.maps.LatLng(41.718851, -73.964400);
     
     const options = {
       center: location,
       zoom: 10
     };
     
-    this.map = new google.maps.Map(this.mapRef.nativeElement, options);
+    const map = new google.maps.Map(this.mapRef.nativeElement, options);
+    
+    this.addMarker(location, map);
   }
   
+  addMarker(position, map) {
+    return new google.maps.Marker({
+      position,
+      map
+    });
+  }
 }
