@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
   "name": "myApp",
+=======
+  "name": "menuApp",
+>>>>>>> 5feca38c31545f699e689cfebe0236494cec8bac
   "app_id": "",
   "type": "ionic-angular"
 }

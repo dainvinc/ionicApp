@@ -4,6 +4,7 @@
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
 -->
+<<<<<<< HEAD
 <!--<ion-header>-->
 
 <!--  <ion-navbar>-->
@@ -28,3 +29,27 @@
     </ion-col>
   </ion-row>
 </ion-content>
+=======
+<ion-header>
+
+  <ion-navbar color="dark">
+    <ion-title>Login</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+<!--<form [formGroup]="loginForm" (submit)="login()">-->
+  <ion-item>
+      <ion-label floating>Email</ion-label>
+      <ion-input type="email" [(ngModel)]="user.email"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Password</ion-label>
+      <ion-input type="password" [(ngModel)]="user.password"></ion-input>
+    </ion-item>
+      <button ion-button block (click)="login(user)" color="secondary">Log in</button>
+<!--</form>-->
+</ion-content>
+>>>>>>> 5feca38c31545f699e689cfebe0236494cec8bac
