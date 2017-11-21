@@ -30,7 +30,7 @@ export class LoginPage {
       if(res) {
         this.navCtrl.setRoot(HomePage);  
       }
-    } catch(Exception e) {
+    } catch(e) {
       console.log(e);
     }
       
