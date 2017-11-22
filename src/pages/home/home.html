@@ -1,18 +1,13 @@
 <ion-header>
   <ion-navbar color="dark">
-<<<<<<< HEAD
     <button ion-button icon-only menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-=======
-    <ion-title>Home Page</ion-title>
->>>>>>> 5feca38c31545f699e689cfebe0236494cec8bac
     <ion-buttons end>
       <button ion-button icon-only (click)="navigateToAddItemsPage()">
         <ion-icon name="add"></ion-icon>
       </button>
     </ion-buttons>
-<<<<<<< HEAD
     <ion-title>Today's Specials</ion-title>
   </ion-navbar>
 </ion-header>
@@ -23,21 +18,4 @@
       <h3>Price: ${{ item.itemNumber }}</h3>
     </ion-item>
   </ion-list>
-=======
-  </ion-navbar>
-</ion-header>
-<ion-content padding class="background">
-  <ion-grid>
-    <ion-row justify-content-center>
-      <ion-col col-sm-6>
-        <ion-list>
-            <ion-item class="new-item col col-lg-1 col-md-2" *ngFor="let item of itemListRef$ | async" (click)="selectItem(item)">
-              <h2>Item Name: {{ item.itemName }}</h2>
-              <h3>Price: ${{ item.itemNumber }}</h3>
-            </ion-item>
-        </ion-list>
-      </ion-col>
-    </ion-row>
-  </ion-grid>
->>>>>>> 5feca38c31545f699e689cfebe0236494cec8bac
 </ion-content>
