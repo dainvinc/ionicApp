@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams, ActionSheetController } from 'ionic-angular';
 import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
-import { AngularFireAuth } from 'angularfire2/auth';
+// import { AngularFireAuth } from 'angularfire2/auth';
 import { AddItem } from '../../models/add-item/add-item.interface';
 import { EditItemPage } from '../edit-item/edit-item';
 import { AddItemPage } from '../add-item/add-item';
@@ -29,7 +29,7 @@ export class HomePage {
   }
   
   selectItem(addItem: AddItem) {
-    this.af.actionSheetCtrl.create({
+    this.actionSheetCtrl.create({
       title: `${addItem.itemName}`, 
       buttons: [
         {
